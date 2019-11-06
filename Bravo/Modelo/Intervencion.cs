@@ -20,7 +20,7 @@ namespace Bravo.Modelo
         public string resumenTrabajoEfectuado { get; set; }
         public int telefonoConectado { get; set; }
         public Estado estado { get; set; }
-        public IList<Dotacion> dotacion { get; set; }
+        public IList<Dotacion> dotaciones { get; set; }
 
         public void finalizar(Intervencion intervencion) {
             estado.finalizar(intervencion);
