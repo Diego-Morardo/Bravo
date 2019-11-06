@@ -52,6 +52,17 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Bombero.cs" />
+    <Compile Include="Modelo\Dotacion.cs" />
+    <Compile Include="Modelo\EnCurso.cs" />
+    <Compile Include="Modelo\Estado.cs" />
+    <Compile Include="Modelo\Finalizada.cs" />
+    <Compile Include="Modelo\HistorialIntervencion.cs" />
+    <Compile Include="Modelo\Intervencion.cs" />
+    <Compile Include="Modelo\Rol.cs" />
+    <Compile Include="Modelo\Sesion.cs" />
+    <Compile Include="Modelo\UnidadMovil.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Home.resx">
@@ -81,6 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modulos\Estados\" />
+    <Folder Include="Modulos\Historiales\" />
+    <Folder Include="Modulos\Intervenciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
