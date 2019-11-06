@@ -17,17 +17,21 @@ namespace Bravo
             InitializeComponent();
             Home home = this;
             diseño();
+            timer1.Enabled = true;
         }
 
         public void diseño()
         {
             subMenuIntervencion.Visible = false;
+            subMenuUM.Visible = false;
         }
 
         private void esconderSubMenu()
         {
             if (subMenuIntervencion.Visible == true)
                 subMenuIntervencion.Visible = false;
+            if (subMenuUM.Visible == true)
+                subMenuUM.Visible = false;
         }
 
         private void mostrarSubMenu(Panel subMenu)
@@ -46,6 +50,17 @@ namespace Bravo
         private void BtnIntervenciones_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(subMenuIntervencion);
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+        }
+
+        private void cargarDGV()
+        {
+            //dgvIntervenciones.Rows.Cells
         }
     }
 }
