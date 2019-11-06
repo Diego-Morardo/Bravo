@@ -15,7 +15,7 @@ namespace Bravo.Modelo
 
         public abstract void crearProximoEstado();
 
-        public abstract void crearHistorialIntervencion();
+        public abstract void crearHistorialIntervencion(Estado estado);
         public abstract void finalizar(Intervencion intervencion);
 
     }

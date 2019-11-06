@@ -15,7 +15,7 @@ namespace Bravo.Modelo
             //vacio
         }
 
-        public override void crearHistorialIntervencion()
+        public override void crearHistorialIntervencion(Estado estado)
         {
             //vacio
         }
