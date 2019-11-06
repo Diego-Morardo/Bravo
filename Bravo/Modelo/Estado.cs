@@ -13,5 +13,10 @@ namespace Bravo.Modelo
         public string descripcion { get; set; }
         public string nombre { get; set; }
 
+        public abstract void crearProximoEstado();
+
+        public abstract void crearHistorialIntervencion();
+        public abstract void finalizar(Intervencion intervencion);
+
     }
 }

@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Modelo\Bombero.cs" />
     <Compile Include="Modelo\Dotacion.cs" />
+    <Compile Include="Modelo\EnCurso.cs" />
     <Compile Include="Modelo\Estado.cs" />
     <Compile Include="Modelo\Finalizada.cs" />
     <Compile Include="Modelo\HistorialIntervencion.cs" />
@@ -88,6 +89,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modulos\Estados\" />
+    <Folder Include="Modulos\Historiales\" />
+    <Folder Include="Modulos\Intervenciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
