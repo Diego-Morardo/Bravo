@@ -8,6 +8,7 @@ namespace Bravo.Modelo
 {
     class Finalizada : Estado
     {
+        //capaz no 
         public int ID { get; set; }
         //retorno un estado para pasarselo al Historial nuevo, en patron dice void
         public override void crearProximoEstado() {
@@ -24,6 +25,7 @@ namespace Bravo.Modelo
         public override void finalizar(Intervencion intervencion) {
             //no tengo idea que va aca xd
             crearProximoEstado();
+            intervencion.dotacion.
         }
 
     }

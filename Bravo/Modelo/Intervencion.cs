@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,12 @@ namespace Bravo.Modelo
         public string resumenSiniestroInformante { get; set; }
         public string resumenTrabajoEfectuado { get; set; }
         public int telefonoConectado { get; set; }
+        public Estado estado { get; set; }
+        public IList<Dotacion> dotacion { get; set; }
+
+        public void finalizar(Intervencion intervencion) {
+            estado.finalizar(intervencion);
+        }
 
     }
 }
