@@ -9,18 +9,21 @@ namespace Bravo.Modelo
     class Finalizada : Estado
     {
         public int ID { get; set; }
-
+        //retorno un estado para pasarselo al Historial nuevo, en patron dice void
         public override void crearProximoEstado() {
-            Estado finalizida = new Finalizada(); 
+            Estado finalizada = new Finalizada();
+            crearHistorialIntervencion(finalizada);
         }
-
-        public override void crearHistorialIntervencion() {
-            //deberia pasarle una intervencion a esta instancia
+        //El patron dice que no se pasan parametros pero como hago si no
+        public override void crearHistorialIntervencion(Estado finalizada) {
+            //deberia pasarle una intervencion a esta instancia ?
             HistorialIntervencion historialIntervencion = new HistorialIntervencion();
+            historialIntervencion.estado = finalizada;
         }
 
         public override void finalizar(Intervencion intervencion) {
             //no tengo idea que va aca xd
+            crearProximoEstado();
         }
 
     }
