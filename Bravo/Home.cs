@@ -94,9 +94,20 @@ namespace Bravo
 
         private void LblSesion_Click(object sender, EventArgs e)
         {
-            this.Close();
             Login login = new Login();
-            login.ShowDialog();
+            login.Show();
+
+            this.Close();
+        }
+
+        private void LblSesion_MouseHover(object sender, EventArgs e)
+        {
+            lblSesion.ForeColor = Color.FromArgb(230, 52, 52);
+        }
+
+        private void LblSesion_MouseLeave(object sender, EventArgs e)
+        {
+            lblSesion.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
         private void cargarDGV()

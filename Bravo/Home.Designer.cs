@@ -31,35 +31,32 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.subMenuUM = new System.Windows.Forms.Panel();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
-            this.subMenuIntervencion = new System.Windows.Forms.Panel();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.btnNueva = new System.Windows.Forms.Button();
-            this.btnIntervenciones = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelForms = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pbIntervenciones = new System.Windows.Forms.PictureBox();
             this.panelUsuario = new System.Windows.Forms.Panel();
+            this.lblSesion = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblSesion = new System.Windows.Forms.Label();
+            this.btnTareas = new System.Windows.Forms.Button();
+            this.btnMateriales = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
-            this.subMenuIntervencion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciones)).BeginInit();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -68,11 +65,11 @@
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMenu.Controls.Add(this.btnUsuarios);
-            this.panelMenu.Controls.Add(this.subMenuUM);
+            this.panelMenu.Controls.Add(this.btnMateriales);
+            this.panelMenu.Controls.Add(this.btnTareas);
+            this.panelMenu.Controls.Add(this.btnHistorial);
             this.panelMenu.Controls.Add(this.btnUM);
-            this.panelMenu.Controls.Add(this.subMenuIntervencion);
-            this.panelMenu.Controls.Add(this.btnIntervenciones);
+            this.panelMenu.Controls.Add(this.btnUsuario);
             this.panelMenu.Controls.Add(this.pictureBox2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -80,29 +77,20 @@
             this.panelMenu.Size = new System.Drawing.Size(193, 498);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnUsuarios
+            // btnHistorial
             // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 421);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(193, 50);
-            this.btnUsuarios.TabIndex = 5;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // subMenuUM
-            // 
-            this.subMenuUM.BackColor = System.Drawing.Color.Transparent;
-            this.subMenuUM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuUM.Location = new System.Drawing.Point(0, 380);
-            this.subMenuUM.Name = "subMenuUM";
-            this.subMenuUM.Size = new System.Drawing.Size(193, 41);
-            this.subMenuUM.TabIndex = 4;
+            this.btnHistorial.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Location = new System.Drawing.Point(0, 296);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(193, 50);
+            this.btnHistorial.TabIndex = 5;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.UseVisualStyleBackColor = false;
             // 
             // btnUM
             // 
@@ -111,7 +99,7 @@
             this.btnUM.FlatAppearance.BorderSize = 0;
             this.btnUM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUM.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUM.Location = new System.Drawing.Point(0, 330);
+            this.btnUM.Location = new System.Drawing.Point(0, 246);
             this.btnUM.Name = "btnUM";
             this.btnUM.Size = new System.Drawing.Size(193, 50);
             this.btnUM.TabIndex = 3;
@@ -119,62 +107,21 @@
             this.btnUM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUM.UseVisualStyleBackColor = false;
             // 
-            // subMenuIntervencion
+            // btnUsuario
             // 
-            this.subMenuIntervencion.BackColor = System.Drawing.Color.Transparent;
-            this.subMenuIntervencion.Controls.Add(this.btnFinalizar);
-            this.subMenuIntervencion.Controls.Add(this.btnNueva);
-            this.subMenuIntervencion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuIntervencion.Location = new System.Drawing.Point(0, 246);
-            this.subMenuIntervencion.Name = "subMenuIntervencion";
-            this.subMenuIntervencion.Size = new System.Drawing.Size(193, 84);
-            this.subMenuIntervencion.TabIndex = 2;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(0, 35);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnFinalizar.Size = new System.Drawing.Size(193, 35);
-            this.btnFinalizar.TabIndex = 1;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            // 
-            // btnNueva
-            // 
-            this.btnNueva.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNueva.FlatAppearance.BorderSize = 0;
-            this.btnNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNueva.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNueva.Location = new System.Drawing.Point(0, 0);
-            this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnNueva.Size = new System.Drawing.Size(193, 35);
-            this.btnNueva.TabIndex = 0;
-            this.btnNueva.Text = "Nueva";
-            this.btnNueva.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNueva.UseVisualStyleBackColor = true;
-            // 
-            // btnIntervenciones
-            // 
-            this.btnIntervenciones.BackColor = System.Drawing.Color.Transparent;
-            this.btnIntervenciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnIntervenciones.FlatAppearance.BorderSize = 0;
-            this.btnIntervenciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIntervenciones.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIntervenciones.Location = new System.Drawing.Point(0, 196);
-            this.btnIntervenciones.Name = "btnIntervenciones";
-            this.btnIntervenciones.Size = new System.Drawing.Size(193, 50);
-            this.btnIntervenciones.TabIndex = 1;
-            this.btnIntervenciones.Text = "Bomberos";
-            this.btnIntervenciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntervenciones.UseVisualStyleBackColor = false;
-            this.btnIntervenciones.Click += new System.EventHandler(this.BtnIntervenciones_Click);
+            this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuario.FlatAppearance.BorderSize = 0;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Location = new System.Drawing.Point(0, 196);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(193, 50);
+            this.btnUsuario.TabIndex = 1;
+            this.btnUsuario.Text = "Usuarios";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.BtnIntervenciones_Click);
             // 
             // pictureBox2
             // 
@@ -202,14 +149,26 @@
             this.panelForms.Size = new System.Drawing.Size(1092, 498);
             this.panelForms.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(782, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(308, 194);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(428, 33);
+            this.pictureBox4.Location = new System.Drawing.Point(440, 33);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(286, 184);
+            this.pictureBox4.Size = new System.Drawing.Size(299, 184);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
@@ -218,9 +177,9 @@
             this.pbIntervenciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbIntervenciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbIntervenciones.Image = ((System.Drawing.Image)(resources.GetObject("pbIntervenciones.Image")));
-            this.pbIntervenciones.Location = new System.Drawing.Point(80, 33);
+            this.pbIntervenciones.Location = new System.Drawing.Point(92, 33);
             this.pbIntervenciones.Name = "pbIntervenciones";
-            this.pbIntervenciones.Size = new System.Drawing.Size(283, 184);
+            this.pbIntervenciones.Size = new System.Drawing.Size(296, 184);
             this.pbIntervenciones.TabIndex = 8;
             this.pbIntervenciones.TabStop = false;
             this.pbIntervenciones.Click += new System.EventHandler(this.PbIntervenciones_Click);
@@ -239,6 +198,21 @@
             this.panelUsuario.Size = new System.Drawing.Size(1092, 90);
             this.panelUsuario.TabIndex = 1;
             // 
+            // lblSesion
+            // 
+            this.lblSesion.AutoSize = true;
+            this.lblSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSesion.ForeColor = System.Drawing.Color.White;
+            this.lblSesion.Location = new System.Drawing.Point(78, 61);
+            this.lblSesion.Name = "lblSesion";
+            this.lblSesion.Size = new System.Drawing.Size(110, 21);
+            this.lblSesion.TabIndex = 5;
+            this.lblSesion.Text = "Cerrar Sesion";
+            this.lblSesion.Click += new System.EventHandler(this.LblSesion_Click);
+            this.lblSesion.MouseLeave += new System.EventHandler(this.LblSesion_MouseLeave);
+            this.lblSesion.MouseHover += new System.EventHandler(this.LblSesion_MouseHover);
+            // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
@@ -256,7 +230,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(955, 25);
+            this.lblHora.Location = new System.Drawing.Point(956, 25);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(84, 37);
             this.lblHora.TabIndex = 3;
@@ -268,7 +242,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(870, 65);
+            this.lblFecha.Location = new System.Drawing.Point(887, 65);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(43, 17);
             this.lblFecha.TabIndex = 2;
@@ -300,30 +274,35 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // pictureBox1
+            // btnTareas
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(770, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 194);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.btnTareas.BackColor = System.Drawing.Color.Transparent;
+            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareas.FlatAppearance.BorderSize = 0;
+            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareas.Location = new System.Drawing.Point(0, 346);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(193, 50);
+            this.btnTareas.TabIndex = 6;
+            this.btnTareas.Text = "Tareas";
+            this.btnTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareas.UseVisualStyleBackColor = false;
             // 
-            // lblSesion
+            // btnMateriales
             // 
-            this.lblSesion.AutoSize = true;
-            this.lblSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSesion.ForeColor = System.Drawing.Color.White;
-            this.lblSesion.Location = new System.Drawing.Point(78, 61);
-            this.lblSesion.Name = "lblSesion";
-            this.lblSesion.Size = new System.Drawing.Size(110, 21);
-            this.lblSesion.TabIndex = 5;
-            this.lblSesion.Text = "Cerrar Sesion";
-            this.lblSesion.Click += new System.EventHandler(this.LblSesion_Click);
+            this.btnMateriales.BackColor = System.Drawing.Color.Transparent;
+            this.btnMateriales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMateriales.FlatAppearance.BorderSize = 0;
+            this.btnMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMateriales.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMateriales.Location = new System.Drawing.Point(0, 396);
+            this.btnMateriales.Name = "btnMateriales";
+            this.btnMateriales.Size = new System.Drawing.Size(193, 50);
+            this.btnMateriales.TabIndex = 7;
+            this.btnMateriales.Text = "Materiales";
+            this.btnMateriales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMateriales.UseVisualStyleBackColor = false;
             // 
             // Home
             // 
@@ -334,17 +313,17 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "Home";
             this.Text = "Bravo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
-            this.subMenuIntervencion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciones)).EndInit();
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,24 +333,22 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnIntervenciones;
+        private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Panel subMenuUM;
+        private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnUM;
-        private System.Windows.Forms.Panel subMenuIntervencion;
-        private System.Windows.Forms.Button btnFinalizar;
-        private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.PictureBox pbIntervenciones;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSesion;
+        private System.Windows.Forms.Button btnTareas;
+        private System.Windows.Forms.Button btnMateriales;
     }
 }
 

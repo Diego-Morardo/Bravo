@@ -40,9 +40,11 @@ namespace Bravo
             }
 
             var rol = comboRol.SelectedItem.ToString();
-            this.Hide();
+            
             Home home = new Home(txtUser.Text, rol);            
-            home.ShowDialog();
+            home.Show();
+
+            this.Close();
         }
     }
 }
