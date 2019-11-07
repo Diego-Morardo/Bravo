@@ -11,10 +11,11 @@ namespace Bravo.Modelo
         //capaz no 
         public int ID { get; set; }
         //retorno un estado para pasarselo al Historial nuevo, en patron dice void
-        public override Estado crearProximoEstado()
-        {
-            return null;
-        }
+
+        //public override Estado crearProximoEstado()
+        //{
+        //    return null;
+        //}
 
         public override HistorialIntervencion crearHistorialIntervencion()
         {

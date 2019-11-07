@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.subMenuUM = new System.Windows.Forms.Panel();
@@ -44,31 +40,26 @@
             this.btnIntervenciones = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.panelDGVInter = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbIntervenciones = new System.Windows.Forms.PictureBox();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dgvIntervenciones = new System.Windows.Forms.DataGridView();
-            this.siniestro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gravedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSesion = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.subMenuIntervencion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelForms.SuspendLayout();
-            this.panelDGVInter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciones)).BeginInit();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenciones)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -200,49 +191,52 @@
             // panelForms
             // 
             this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.panelForms.Controls.Add(this.button2);
-            this.panelForms.Controls.Add(this.button1);
-            this.panelForms.Controls.Add(this.panelDGVInter);
-            this.panelForms.Controls.Add(this.label1);
-            this.panelForms.Controls.Add(this.panelUsuario);
             this.panelForms.Controls.Add(this.pictureBox1);
+            this.panelForms.Controls.Add(this.pictureBox4);
+            this.panelForms.Controls.Add(this.pbIntervenciones);
+            this.panelForms.Controls.Add(this.panelUsuario);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelForms.Location = new System.Drawing.Point(193, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(701, 498);
+            this.panelForms.Size = new System.Drawing.Size(1092, 498);
             this.panelForms.TabIndex = 1;
             // 
-            // panelDGVInter
+            // pictureBox4
             // 
-            this.panelDGVInter.Controls.Add(this.dgvIntervenciones);
-            this.panelDGVInter.Location = new System.Drawing.Point(66, 111);
-            this.panelDGVInter.Name = "panelDGVInter";
-            this.panelDGVInter.Size = new System.Drawing.Size(389, 272);
-            this.panelDGVInter.TabIndex = 3;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(428, 33);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(286, 184);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
-            // label1
+            // pbIntervenciones
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 40);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Intervenciones en curso...";
+            this.pbIntervenciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbIntervenciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbIntervenciones.Image = ((System.Drawing.Image)(resources.GetObject("pbIntervenciones.Image")));
+            this.pbIntervenciones.Location = new System.Drawing.Point(80, 33);
+            this.pbIntervenciones.Name = "pbIntervenciones";
+            this.pbIntervenciones.Size = new System.Drawing.Size(283, 184);
+            this.pbIntervenciones.TabIndex = 8;
+            this.pbIntervenciones.TabStop = false;
+            this.pbIntervenciones.Click += new System.EventHandler(this.PbIntervenciones_Click);
             // 
             // panelUsuario
             // 
+            this.panelUsuario.Controls.Add(this.lblSesion);
             this.panelUsuario.Controls.Add(this.lblRol);
             this.panelUsuario.Controls.Add(this.lblHora);
             this.panelUsuario.Controls.Add(this.lblFecha);
             this.panelUsuario.Controls.Add(this.lblNombreUsuario);
             this.panelUsuario.Controls.Add(this.pbUsuario);
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUsuario.Location = new System.Drawing.Point(0, 427);
+            this.panelUsuario.Location = new System.Drawing.Point(0, 408);
             this.panelUsuario.Name = "panelUsuario";
-            this.panelUsuario.Size = new System.Drawing.Size(701, 71);
+            this.panelUsuario.Size = new System.Drawing.Size(1092, 90);
             this.panelUsuario.TabIndex = 1;
             // 
             // lblRol
@@ -250,7 +244,7 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(73, 38);
+            this.lblRol.Location = new System.Drawing.Point(78, 35);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(89, 21);
             this.lblRol.TabIndex = 4;
@@ -262,7 +256,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(564, 6);
+            this.lblHora.Location = new System.Drawing.Point(955, 25);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(84, 37);
             this.lblHora.TabIndex = 3;
@@ -274,7 +268,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(479, 46);
+            this.lblFecha.Location = new System.Drawing.Point(870, 65);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(43, 17);
             this.lblFecha.TabIndex = 2;
@@ -285,7 +279,7 @@
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(73, 9);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(78, 9);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(129, 21);
             this.lblNombreUsuario.TabIndex = 1;
@@ -296,152 +290,61 @@
             this.pbUsuario.BackColor = System.Drawing.Color.Transparent;
             this.pbUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbUsuario.BackgroundImage")));
             this.pbUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbUsuario.Location = new System.Drawing.Point(6, 9);
+            this.pbUsuario.Location = new System.Drawing.Point(6, 19);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(61, 50);
             this.pbUsuario.TabIndex = 0;
             this.pbUsuario.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(424, 196);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 214);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // dgvIntervenciones
+            // pictureBox1
             // 
-            this.dgvIntervenciones.AllowUserToAddRows = false;
-            this.dgvIntervenciones.AllowUserToDeleteRows = false;
-            this.dgvIntervenciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvIntervenciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvIntervenciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.dgvIntervenciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvIntervenciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIntervenciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvIntervenciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIntervenciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.siniestro,
-            this.gravedad,
-            this.encargado});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIntervenciones.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvIntervenciones.EnableHeadersVisualStyles = false;
-            this.dgvIntervenciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.dgvIntervenciones.Location = new System.Drawing.Point(3, 3);
-            this.dgvIntervenciones.Name = "dgvIntervenciones";
-            this.dgvIntervenciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIntervenciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvIntervenciones.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvIntervenciones.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvIntervenciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIntervenciones.Size = new System.Drawing.Size(383, 266);
-            this.dgvIntervenciones.TabIndex = 0;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(770, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(308, 194);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
-            // siniestro
+            // lblSesion
             // 
-            this.siniestro.HeaderText = "Siniestro";
-            this.siniestro.Name = "siniestro";
-            this.siniestro.ReadOnly = true;
-            this.siniestro.Width = 104;
-            // 
-            // gravedad
-            // 
-            this.gravedad.HeaderText = "Gravedad";
-            this.gravedad.Name = "gravedad";
-            this.gravedad.ReadOnly = true;
-            this.gravedad.Width = 133;
-            // 
-            // encargado
-            // 
-            this.encargado.HeaderText = "Encargado";
-            this.encargado.Name = "encargado";
-            this.encargado.ReadOnly = true;
-            this.encargado.Width = 137;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(69, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Finalizar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(268, 389);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Nueva";
-            this.button2.UseVisualStyleBackColor = false;
+            this.lblSesion.AutoSize = true;
+            this.lblSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSesion.ForeColor = System.Drawing.Color.White;
+            this.lblSesion.Location = new System.Drawing.Point(78, 61);
+            this.lblSesion.Name = "lblSesion";
+            this.lblSesion.Size = new System.Drawing.Size(110, 21);
+            this.lblSesion.TabIndex = 5;
+            this.lblSesion.Text = "Cerrar Sesion";
+            this.lblSesion.Click += new System.EventHandler(this.LblSesion_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 498);
+            this.ClientSize = new System.Drawing.Size(1285, 498);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panelMenu);
             this.Name = "Home";
             this.Text = "Bravo";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panelMenu.ResumeLayout(false);
             this.subMenuIntervencion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelForms.ResumeLayout(false);
-            this.panelForms.PerformLayout();
-            this.panelDGVInter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciones)).EndInit();
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,15 +368,10 @@
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.PictureBox pbIntervenciones;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelDGVInter;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvIntervenciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn siniestro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gravedad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn encargado;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblSesion;
     }
 }
 

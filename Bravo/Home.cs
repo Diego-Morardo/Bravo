@@ -12,12 +12,22 @@ namespace Bravo
 {
     public partial class Home : Form
     {
-        public Home()
+        string nomUser, nomRol;
+
+        public Home(string user, string rol)
         {
             InitializeComponent();
             Home home = this;
             diseño();
             timer1.Enabled = true;
+            nomUser = user;
+            nomRol = rol;
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            lblNombreUsuario.Text = nomUser;
+            lblRol.Text = nomRol;
         }
 
         public void diseño()
@@ -47,6 +57,30 @@ namespace Bravo
             }
         }
 
+        public Form formActivo = null;
+        public void abrirForm(Form form)
+        {
+            if (formActivo != null)
+            {
+                formActivo.Close();
+            }
+
+            formActivo = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelForms.Controls.Add(form);
+            panelForms.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+
+        private void PbIntervenciones_Click(object sender, EventArgs e)
+        {
+            Intervenciones intervenciones = new Intervenciones();
+            abrirForm(intervenciones);
+        }
+
         private void BtnIntervenciones_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(subMenuIntervencion);
@@ -58,9 +92,18 @@ namespace Bravo
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
 
+        private void LblSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
         private void cargarDGV()
         {
             //dgvIntervenciones.Rows.Cells
         }
+
+        
     }
 }

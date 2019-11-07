@@ -10,7 +10,7 @@ namespace Bravo.Modelo
     {
         public int ID { get; set; }
 
-        public override Estado crearProximoEstado() {
+        public Estado crearEstadoFinalizada() {
             Estado proximoEstado = new Finalizada();
             return proximoEstado;
         }
@@ -23,10 +23,16 @@ namespace Bravo.Modelo
         public override void finalizar(Intervencion intervencion, int kmLlegada, int kmSalida)
         {
             //llamo a los otros metodos ,que no se si esta bien desde aca o de donde, que crean el estado e Historial y lo setean
-            Estado proximoEstado = crearProximoEstado();
+
+            //Se crea instancia de Finalizada
+            Estado proximoEstado = crearEstadoFinalizada();
+
+            //Se crea instancia del nuevo historial seteando estado y fechaActual
             HistorialIntervencion historialIntervencion = crearHistorialIntervencion();
             historialIntervencion.estado = proximoEstado;
             historialIntervencion.intervencion = intervencion;
+            historialIntervencion.fechaHoraDesde = DateTime.Today;
+
             //realiza la carga de datos provistos por el usuario de las dotaciones
             foreach (Dotacion dotacion in intervencion.dotaciones) {
                 dotacion.intervencion = intervencion;

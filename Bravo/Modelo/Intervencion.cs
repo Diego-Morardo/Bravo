@@ -23,7 +23,7 @@ namespace Bravo.Modelo
         public IList<Dotacion> dotaciones { get; set; }
 
         public void finalizar(Intervencion intervencion) {
-            estado.finalizar(intervencion);
+            //estado.finalizar(intervencion);
         }
 
     }
