@@ -49,7 +49,6 @@ namespace Bravo
             txtUM.Visible = false;
 
             btnCargar.Visible = false;
-            btnCargarDatos.Visible = false;
 
             txtSalir.Enabled = false;
             txtUM.Enabled = false;
@@ -96,7 +95,6 @@ namespace Bravo
             txtUM.Visible = true;
 
             btnCargar.Visible = true;
-            btnCargarDatos.Visible = true;
         }
 
         private void cargarGrillas()
@@ -236,26 +234,15 @@ namespace Bravo
             }
         }
 
-        
-
-        private void BtnCargarDatos_Click(object sender, EventArgs e)
-        {
-            var seleccionada = dgvIntervenciones.SelectedRows;
-            if (seleccionada.Count == 0 || seleccionada.Count > 1)
-            {
-                MessageBox.Show("Debe seleccionar una unica dotación");
-                return;
-            }
-
-            var kmsalir = dgvDotaciones.CurrentRow.Cells[1].Value.ToString();
-            var um = dgvDotaciones.CurrentRow.Cells[2].Value.ToString();
-
-            txtSalir.Text = kmsalir;
-            txtUM.Text = um;        
-        }
 
         private void BtnCargar_Click(object sender, EventArgs e)
         {
+            if(float.Parse(txtKmLlegada.Text.ToString()) < float.Parse(txtSalir.Text.ToString()))
+            {
+                MessageBox.Show("Kilometraje al volver debe ser mayor al kilometraje al salir");
+                return;
+            }
+
             var km = float.Parse(txtKmLlegada.Text.ToString());
             kms.Add(km);
             fechas.Add(dtpFechaLlegada.Value);
@@ -265,6 +252,12 @@ namespace Bravo
 
         private void BtnFinalizarIntervencion_Click(object sender, EventArgs e)
         {
+            if(kms.Count() < 3)
+            {
+                MessageBox.Show("Faltan dotaciones por actualizar. \nPor favor, ingrese los datos solicitados.");
+                return;
+            }
+
             var seleccionada = dgvIntervenciones.SelectedRows;
 
             foreach (DataGridViewRow fila in seleccionada)
@@ -277,7 +270,19 @@ namespace Bravo
 
             intervencion.finalizar(intervencion, kms, fechas);
 
-            MessageBox.Show("Intervencion finalizada con exito. \n Nuevo Estado: " + intervencion.estadoActual.ToString()) ;
+            MessageBox.Show("Intervencion finalizada con exito. \n\nNuevo Estado: " + intervencion.estadoActual.ToString()) ;
+
+            this.Close();
+        }
+
+
+        private void DgvDotaciones_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var kmsalir = dgvDotaciones.CurrentRow.Cells[1].Value.ToString();
+            var um = dgvDotaciones.CurrentRow.Cells[2].Value.ToString();
+
+            txtSalir.Text = kmsalir;
+            txtUM.Text = um;
         }
     }
 }
