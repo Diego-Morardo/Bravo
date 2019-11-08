@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bravo.Modelo;
 
 namespace Bravo
 {
@@ -18,7 +19,6 @@ namespace Bravo
         {
             InitializeComponent();
             Home home = this;
-            diseño();
             timer1.Enabled = true;
             nomUser = user;
             nomRol = rol;
@@ -28,33 +28,7 @@ namespace Bravo
         {
             lblNombreUsuario.Text = nomUser;
             lblRol.Text = nomRol;
-        }
-
-        public void diseño()
-        {
-            subMenuIntervencion.Visible = false;
-            subMenuUM.Visible = false;
-        }
-
-        private void esconderSubMenu()
-        {
-            if (subMenuIntervencion.Visible == true)
-                subMenuIntervencion.Visible = false;
-            if (subMenuUM.Visible == true)
-                subMenuUM.Visible = false;
-        }
-
-        private void mostrarSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                esconderSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
+            pbIntervenciones.ContextMenuStrip = menu;
         }
 
         public Form formActivo = null;
@@ -77,14 +51,10 @@ namespace Bravo
 
         private void PbIntervenciones_Click(object sender, EventArgs e)
         {
-            Intervenciones intervenciones = new Intervenciones();
+            Intervenciones intervenciones = new Intervenciones(nomRol);
             abrirForm(intervenciones);
         }
 
-        private void BtnIntervenciones_Click(object sender, EventArgs e)
-        {
-            mostrarSubMenu(subMenuIntervencion);
-        }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -114,6 +84,8 @@ namespace Bravo
         {
             //dgvIntervenciones.Rows.Cells
         }
+
+        
 
         
     }

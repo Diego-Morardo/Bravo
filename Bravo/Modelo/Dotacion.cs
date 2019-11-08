@@ -9,11 +9,12 @@ namespace Bravo.Modelo
     class Dotacion
     {
         public int ID { get; set; }
-        public Intervencion intervencion { get; set; }
-        public UnidadMovil unidadMovil { get; set; }
+        public string unidadMovil { get; set; }
         public DateTime fechaSalida { get; set; }
         public DateTime fechaLlegada { get; set; }
-        public int kmUnidadSalida { get; set; }
-        public int kmUnidadLlegada { get; set; }
+        public float kmUnidadSalida { get; set; }
+        public float kmUnidadLlegada { get; set; }
+
+      
     }
 }

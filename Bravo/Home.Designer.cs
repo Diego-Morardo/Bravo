@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnMateriales = new System.Windows.Forms.Button();
+            this.btnTareas = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
@@ -47,8 +49,9 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnTareas = new System.Windows.Forms.Button();
-            this.btnMateriales = new System.Windows.Forms.Button();
+            this.menu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asdasdToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelForms.SuspendLayout();
@@ -57,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciones)).BeginInit();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -76,6 +80,36 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(193, 498);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnMateriales
+            // 
+            this.btnMateriales.BackColor = System.Drawing.Color.Transparent;
+            this.btnMateriales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMateriales.FlatAppearance.BorderSize = 0;
+            this.btnMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMateriales.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMateriales.Location = new System.Drawing.Point(0, 396);
+            this.btnMateriales.Name = "btnMateriales";
+            this.btnMateriales.Size = new System.Drawing.Size(193, 50);
+            this.btnMateriales.TabIndex = 7;
+            this.btnMateriales.Text = "Materiales";
+            this.btnMateriales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMateriales.UseVisualStyleBackColor = false;
+            // 
+            // btnTareas
+            // 
+            this.btnTareas.BackColor = System.Drawing.Color.Transparent;
+            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareas.FlatAppearance.BorderSize = 0;
+            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareas.Location = new System.Drawing.Point(0, 346);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(193, 50);
+            this.btnTareas.TabIndex = 6;
+            this.btnTareas.Text = "Tareas";
+            this.btnTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareas.UseVisualStyleBackColor = false;
             // 
             // btnHistorial
             // 
@@ -121,7 +155,6 @@
             this.btnUsuario.Text = "Usuarios";
             this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuario.UseVisualStyleBackColor = false;
-            this.btnUsuario.Click += new System.EventHandler(this.BtnIntervenciones_Click);
             // 
             // pictureBox2
             // 
@@ -274,35 +307,30 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // btnTareas
+            // menu
             // 
-            this.btnTareas.BackColor = System.Drawing.Color.Transparent;
-            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTareas.FlatAppearance.BorderSize = 0;
-            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTareas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTareas.Location = new System.Drawing.Point(0, 346);
-            this.btnTareas.Name = "btnTareas";
-            this.btnTareas.Size = new System.Drawing.Size(193, 50);
-            this.btnTareas.TabIndex = 6;
-            this.btnTareas.Text = "Tareas";
-            this.btnTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareas.UseVisualStyleBackColor = false;
+            this.menu.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asdasdToolStripMenuItem,
+            this.asdasdToolStripMenuItem1});
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(140, 56);
             // 
-            // btnMateriales
+            // asdasdToolStripMenuItem
             // 
-            this.btnMateriales.BackColor = System.Drawing.Color.Transparent;
-            this.btnMateriales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMateriales.FlatAppearance.BorderSize = 0;
-            this.btnMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMateriales.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMateriales.Location = new System.Drawing.Point(0, 396);
-            this.btnMateriales.Name = "btnMateriales";
-            this.btnMateriales.Size = new System.Drawing.Size(193, 50);
-            this.btnMateriales.TabIndex = 7;
-            this.btnMateriales.Text = "Materiales";
-            this.btnMateriales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMateriales.UseVisualStyleBackColor = false;
+            this.asdasdToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.asdasdToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.asdasdToolStripMenuItem.Name = "asdasdToolStripMenuItem";
+            this.asdasdToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.asdasdToolStripMenuItem.Text = "Finalizar";
+            // 
+            // asdasdToolStripMenuItem1
+            // 
+            this.asdasdToolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
+            this.asdasdToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.asdasdToolStripMenuItem1.Name = "asdasdToolStripMenuItem1";
+            this.asdasdToolStripMenuItem1.Size = new System.Drawing.Size(139, 26);
+            this.asdasdToolStripMenuItem1.Text = "Nueva";
             // 
             // Home
             // 
@@ -324,6 +352,7 @@
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
+            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -349,6 +378,9 @@
         private System.Windows.Forms.Label lblSesion;
         private System.Windows.Forms.Button btnTareas;
         private System.Windows.Forms.Button btnMateriales;
+        private System.Windows.Forms.ContextMenuStrip menu;
+        private System.Windows.Forms.ToolStripMenuItem asdasdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asdasdToolStripMenuItem1;
     }
 }
 
