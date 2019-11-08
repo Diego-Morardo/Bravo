@@ -136,6 +136,7 @@
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(447, 128);
+            this.txtUser.MaxLength = 25;
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(271, 25);
@@ -143,16 +144,18 @@
             // 
             // txtPass
             // 
+            this.txtPass.AcceptsTab = true;
+            this.txtPass.AllowDrop = true;
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(447, 217);
+            this.txtPass.MaxLength = 25;
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '.';
+            this.txtPass.PasswordChar = '●';
             this.txtPass.Size = new System.Drawing.Size(271, 25);
             this.txtPass.TabIndex = 16;
-            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 

@@ -51,6 +51,9 @@ namespace Bravo
             btnCargar.Visible = false;
             btnCargarDatos.Visible = false;
 
+            txtSalir.Enabled = false;
+            txtUM.Enabled = false;
+
             cargarGrillas();
 
             
@@ -65,7 +68,7 @@ namespace Bravo
             var seleccionada = dgvIntervenciones.SelectedRows;
             if (seleccionada.Count == 0 || seleccionada.Count > 1)
             {
-                MessageBox.Show("Debe seleccionar una unica fila");
+                MessageBox.Show("Debe seleccionar una unica intervención");
                 return;
             }
 
@@ -237,11 +240,18 @@ namespace Bravo
 
         private void BtnCargarDatos_Click(object sender, EventArgs e)
         {
+            var seleccionada = dgvIntervenciones.SelectedRows;
+            if (seleccionada.Count == 0 || seleccionada.Count > 1)
+            {
+                MessageBox.Show("Debe seleccionar una unica dotación");
+                return;
+            }
+
             var kmsalir = dgvDotaciones.CurrentRow.Cells[1].Value.ToString();
             var um = dgvDotaciones.CurrentRow.Cells[2].Value.ToString();
 
             txtSalir.Text = kmsalir;
-            txtUM.Text = um;
+            txtUM.Text = um;        
         }
 
         private void BtnCargar_Click(object sender, EventArgs e)
@@ -249,6 +259,8 @@ namespace Bravo
             var km = float.Parse(txtKmLlegada.Text.ToString());
             kms.Add(km);
             fechas.Add(dtpFechaLlegada.Value);
+
+            MessageBox.Show("Datos cargados con exito");
         }
 
         private void BtnFinalizarIntervencion_Click(object sender, EventArgs e)
@@ -264,6 +276,8 @@ namespace Bravo
             }
 
             intervencion.finalizar(intervencion, kms, fechas);
+
+            MessageBox.Show("Intervencion finalizada con exito. \n Nuevo Estado: " + intervencion.estadoActual.ToString()) ;
         }
     }
 }

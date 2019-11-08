@@ -51,6 +51,12 @@ namespace Bravo
 
         private void PbIntervenciones_Click(object sender, EventArgs e)
         {
+            if(nomRol != "Encargado de Guardia")
+            {
+                MessageBox.Show("No tiene permisos para realizar esta operación");
+                return;
+            }
+
             Intervenciones intervenciones = new Intervenciones(nomRol);
             abrirForm(intervenciones);
         }
@@ -78,15 +84,6 @@ namespace Bravo
         private void LblSesion_MouseLeave(object sender, EventArgs e)
         {
             lblSesion.ForeColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void cargarDGV()
-        {
-            //dgvIntervenciones.Rows.Cells
-        }
-
-        
-
-        
+        }        
     }
 }
