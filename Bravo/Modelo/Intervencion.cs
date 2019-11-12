@@ -12,7 +12,7 @@ namespace Bravo.Modelo
         public int ID { get; set; }
         public string calle { get; set; }
         public DateTime fechaHotaSolicitud { get; set; }
-        //Creo una clase Informante?
+    
         public string nombreInformante { get; set; }
         public string apellidoInformante { get; set; }
         public string resumenSiniestroInformante { get; set; }

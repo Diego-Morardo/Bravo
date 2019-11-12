@@ -11,9 +11,6 @@ using Bravo.Modelo;
 
 namespace Bravo
 {
-
-
-
     public partial class Intervenciones : Form
     {
         Intervencion intervencion = new Intervencion();
@@ -22,7 +19,7 @@ namespace Bravo
         List<float> kms;
         List<DateTime> fechas;
         List<Intervencion> inters;
-        List<Dotacion> dotas;
+        GestorFinalizarIntervención GestorFinalizarIntervención;
 
         public Intervenciones(string rol)
         {
@@ -30,8 +27,9 @@ namespace Bravo
             nomRol = rol;
             kms = new List<float>();
             fechas = new List<DateTime>();
-            inters = new List<Intervencion>();
-            dotas = new List<Dotacion>();
+
+            GestorFinalizarIntervención = new GestorFinalizarIntervención();
+            inters = GestorFinalizarIntervención.crearIntervenciones();
         }
 
         private void Intervenciones_Load(object sender, EventArgs e)
@@ -53,10 +51,9 @@ namespace Bravo
             txtSalir.Enabled = false;
             txtUM.Enabled = false;
 
-            cargarGrillas();
-
-            
+            cargarGrillaIntervenciones();            
         }
+
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -69,6 +66,28 @@ namespace Bravo
             {
                 MessageBox.Show("Debe seleccionar una unica intervención");
                 return;
+            }
+
+            var id = int.Parse(dgvIntervenciones.CurrentRow.Cells[0].Value.ToString());
+
+            foreach (Intervencion inter in inters)
+            {
+                if (inter.ID == id)
+                {
+                    intervencion = inter;
+                }
+            }
+
+            foreach (Dotacion dota in intervencion.dotaciones)
+            {
+                var fila = new string[] {
+                    dota.ID.ToString(),
+                    dota.fechaSalida.ToString(),
+                    dota.kmUnidadSalida.ToString(),
+                    dota.unidadMovil.ToString(),
+                };
+
+                dgvDotaciones.Rows.Add(fila);
             }
 
             dgvDotaciones.Visible = true;
@@ -97,157 +116,50 @@ namespace Bravo
             btnCargar.Visible = true;
         }
 
-        private void cargarGrillas()
+        private void cargarGrillaIntervenciones()
         {
-
-            Dotacion dota1 = new Dotacion()
+          foreach (Intervencion inter in inters)
             {
-                fechaSalida = DateTime.Today,
-                kmUnidadSalida = 10548,
-                unidadMovil = "AB 123 CD"
-            };
-
-            Dotacion dota2 = new Dotacion()
-            {
-                fechaSalida = DateTime.Today,
-                kmUnidadSalida = 6546,
-                unidadMovil = "AB 535 GF"
-            };
-
-            Dotacion dota3 = new Dotacion()
-            {
-                fechaSalida = DateTime.Today,
-                kmUnidadSalida = 15480,
-                unidadMovil = "CR 654 FT"
-            };
-
-            
-            dotas.Add(dota1);
-            dotas.Add(dota2);
-            dotas.Add(dota3);
-
-            EnCurso enCurso = new EnCurso();
-
-            Intervencion inter1 = new Intervencion()
-            {
-                calle = "calle 51",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Incendio",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter2 = new Intervencion()
-            {
-                calle = "calle 61",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Accidente de transito",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter3 = new Intervencion()
-            {
-                calle = "calle 38",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Gatito en el arbol",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter4 = new Intervencion()
-            {
-                calle = "calle 12",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Personas atrapadas en ascensor",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
- 
-            Intervencion inter5 = new Intervencion()
-            {
-                calle = "New York",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Esta aterrizando una nave de Thanos",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter6 = new Intervencion()
-            {
-                calle = "Barrio Jardin",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Accidente de transito",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter7 = new Intervencion()
-            {
-                calle = "Av. Simpre Viva",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Incendio",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            Intervencion inter8 = new Intervencion()
-            {
-                calle = "Nueva Cordoba",
-                fechaHotaSolicitud = DateTime.Today,
-                resumenSiniestroInformante = "Fuga de gas",
-                dotaciones = dotas,
-                estadoActual = enCurso
-            };
-
-            inters.Add(inter1);
-            inters.Add(inter2);
-            inters.Add(inter3);
-            inters.Add(inter4);
-            inters.Add(inter5);
-            inters.Add(inter6);
-            inters.Add(inter7);
-            inters.Add(inter8);
-
-            foreach (Intervencion inter in inters)
-            {
-
                 var fila = new string[] {
+                    inter.ID.ToString(),
                     inter.fechaHotaSolicitud.ToString(),
                     inter.calle.ToString(),
                     inter.resumenSiniestroInformante.ToString()
                 };
 
-                dgvIntervenciones.Rows.Add(fila);
-            }
-
-            foreach (Dotacion dota in dotas)
-            {
-
-                var fila = new string[] {
-                    dota.fechaSalida.ToString(),
-                    dota.kmUnidadSalida.ToString(),
-                    dota.unidadMovil.ToString(),
-                };
-
-                dgvDotaciones.Rows.Add(fila);
-            }
+                dgvIntervenciones.Rows.Add(fila);                
+            }           
         }
-
 
         private void BtnCargar_Click(object sender, EventArgs e)
         {
-            if(float.Parse(txtKmLlegada.Text.ToString()) < float.Parse(txtSalir.Text.ToString()))
+            Dotacion dotacion = new Dotacion();
+
+            var id = int.Parse(dgvDotaciones.CurrentRow.Cells[0].Value.ToString());
+
+            foreach (Dotacion dota in intervencion.dotaciones)
             {
-                MessageBox.Show("Kilometraje al volver debe ser mayor al kilometraje al salir");
-                return;
+                if (dota.ID == id)
+                {
+                    dotacion = dota;
+                }
             }
 
-            var km = float.Parse(txtKmLlegada.Text.ToString());
-            kms.Add(km);
-            fechas.Add(dtpFechaLlegada.Value);
+            var kmLlegada = float.Parse(txtKmLlegada.Text.ToString());
+            var kmSalida = dotacion.kmUnidadSalida;
 
-            MessageBox.Show("Datos cargados con exito");
+            if(GestorFinalizarIntervención.validarKilometraje(kmLlegada, kmSalida))
+            {
+                kms.Add(kmLlegada);
+                fechas.Add(dtpFechaLlegada.Value);
+
+                MessageBox.Show("Datos cargados con exito");
+            }
+            else
+            {
+                MessageBox.Show("Kilometraje de llegada debe ser mayor a kilometraje de salida");
+                return;
+            }
         }
 
         private void BtnFinalizarIntervencion_Click(object sender, EventArgs e)
@@ -258,23 +170,13 @@ namespace Bravo
                 return;
             }
 
-            var seleccionada = dgvIntervenciones.SelectedRows;
-
-            foreach (DataGridViewRow fila in seleccionada)
-            {
-                intervencion.calle = fila.Cells[1].Value.ToString();
-                intervencion.resumenSiniestroInformante = fila.Cells[2].Value.ToString();
-                intervencion.estadoActual = new EnCurso();
-                intervencion.dotaciones = dotas;
-            }
-
-            intervencion.finalizar(intervencion, kms, fechas);
+            GestorFinalizarIntervención.registrarFinalizacion(intervencion, kms, fechas);
+            //intervencion.finalizar(intervencion, kms, fechas);
 
             MessageBox.Show("Intervencion finalizada con exito. \n\nNuevo Estado: " + intervencion.estadoActual.ToString()) ;
 
             this.Close();
         }
-
 
         private void DgvDotaciones_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

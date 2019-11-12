@@ -13,8 +13,6 @@ namespace Bravo.Modelo
         public DateTime fechaSalida { get; set; }
         public DateTime fechaLlegada { get; set; }
         public float kmUnidadSalida { get; set; }
-        public float kmUnidadLlegada { get; set; }
-
-      
+        public float kmUnidadLlegada { get; set; }     
     }
 }

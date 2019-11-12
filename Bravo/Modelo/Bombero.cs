@@ -8,19 +8,19 @@ namespace Bravo.Modelo
 {
     class Bombero
     {
-        public int ID { get; set; }
-        public Intervencion intervencion { get; set; }
-        public bool activo { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        //Hace falta crear una clase dom
-        public string calle { get; set; }
-        public int nroCalle { get; set; }
-        public int dni { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public string mail { get; set; }
-        public int telefono { get; set; }
-        public Rol rol { get; set; }
+        private int ID { get; set; }
+        private Intervencion intervencion { get; set; }
+        private bool activo { get; set; }
+        private string nombre { get; set; }
+        private string apellido { get; set; }
+        
+        private string calle { get; set; }
+        private int nroCalle { get; set; }
+        private int dni { get; set; }
+        private DateTime fechaNacimiento { get; set; }
+        private string mail { get; set; }
+        private int telefono { get; set; }
+        private Rol rol { get; set; }
 
 
     }
