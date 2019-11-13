@@ -29,7 +29,7 @@ namespace Bravo
             fechas = new List<DateTime>();
 
             GestorFinalizarIntervención = new GestorFinalizarIntervención();
-            inters = GestorFinalizarIntervención.crearIntervenciones();
+            inters = GestorFinalizarIntervención.obtenerIntervencionesEnCurso();
         }
 
         private void Intervenciones_Load(object sender, EventArgs e)
@@ -160,6 +160,10 @@ namespace Bravo
                 MessageBox.Show("Kilometraje de llegada debe ser mayor a kilometraje de salida");
                 return;
             }
+
+            txtKmLlegada.Text = "";
+            txtSalir.Text = "";
+            txtUM.Text = "";
         }
 
         private void BtnFinalizarIntervencion_Click(object sender, EventArgs e)
@@ -170,8 +174,8 @@ namespace Bravo
                 return;
             }
 
-            GestorFinalizarIntervención.registrarFinalizacion(intervencion, kms, fechas);
-            //intervencion.finalizar(intervencion, kms, fechas);
+            //GestorFinalizarIntervención.registrarFinalizacion(intervencion, kms, fechas);
+            intervencion.finalizar(intervencion, kms, fechas);
 
             MessageBox.Show("Intervencion finalizada con exito. \n\nNuevo Estado: " + intervencion.estadoActual.ToString()) ;
 
@@ -180,8 +184,8 @@ namespace Bravo
 
         private void DgvDotaciones_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var kmsalir = dgvDotaciones.CurrentRow.Cells[1].Value.ToString();
-            var um = dgvDotaciones.CurrentRow.Cells[2].Value.ToString();
+            var kmsalir = dgvDotaciones.CurrentRow.Cells[2].Value.ToString();
+            var um = dgvDotaciones.CurrentRow.Cells[3].Value.ToString();
 
             txtSalir.Text = kmsalir;
             txtUM.Text = um;

@@ -34,6 +34,11 @@ namespace Bravo.Modelo
             historiales.Add(historial);
         }
 
+        public bool estaEnCurso()
+        {
+            return estadoActual.esEnCurso();
+        }
+
   
     }
 }

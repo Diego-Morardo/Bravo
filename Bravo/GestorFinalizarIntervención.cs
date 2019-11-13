@@ -143,6 +143,22 @@ namespace Bravo
             return inters;
         }
 
+        public List<Intervencion> obtenerIntervencionesEnCurso()
+        {
+            List<Intervencion> inters = crearIntervenciones();
+            List<Intervencion> interEnCurso = new List<Intervencion>();
+
+            foreach(Intervencion inter in inters)
+            {
+                if(inter.estaEnCurso())
+                {
+                    interEnCurso.Add(inter);
+                }
+            }
+
+            return interEnCurso;
+        }
+
         public void registrarFinalizacion(Intervencion inter, List<float> km, List<DateTime> fechaActual)
         {
             intervencion.finalizar(inter, km, fechaActual);

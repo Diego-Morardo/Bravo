@@ -111,9 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagenes\" />
-    <Folder Include="Modulos\Estados\" />
-    <Folder Include="Modulos\Historiales\" />
-    <Folder Include="Modulos\Intervenciones\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

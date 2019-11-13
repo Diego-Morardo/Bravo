@@ -19,5 +19,13 @@ namespace Bravo.Modelo
         {
         }
 
+        public override bool esFinalizada() => true;
+        public override bool esEnCurso() => false;
+        public override bool esCancelada() => false;
+        public override bool esConvocada() => false;
+        public override bool esPendiente() => false;
+        public override bool esFirmada() => false;
+        public override bool esAbortada() => false;
+
     }
 }

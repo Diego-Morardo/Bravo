@@ -15,6 +15,13 @@ namespace Bravo.Modelo
 
         public abstract HistorialIntervencion crearHistorialIntervencion(Estado estado, DateTime fechaActual);
         public abstract void finalizar(Intervencion intervencion, List<float> kmLlegada, List<DateTime> fechaActual);
+        public abstract bool esEnCurso();
+        public abstract bool esConvocada();
+        public abstract bool esPendiente();
+        public abstract bool esCancelada();
+        public abstract bool esFirmada();
+        public abstract bool esFinalizada();
+        public abstract bool esAbortada();
 
     }
 }

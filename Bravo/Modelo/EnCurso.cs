@@ -52,5 +52,14 @@ namespace Bravo.Modelo
 
             intervencion.estadoActual = proximoEstado;
         }
+
+        public override bool esEnCurso() => true;
+        public override bool esCancelada() => false;
+        public override bool esConvocada() => false;
+        public override bool esFinalizada() => false;
+        public override bool esPendiente() => false;
+        public override bool esFirmada() => false;
+        public override bool esAbortada() => false;
+
     }
 }
