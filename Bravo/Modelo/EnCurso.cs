@@ -29,7 +29,7 @@ namespace Bravo.Modelo
 
         public override void finalizar(Intervencion intervencion, List<float> kmLlegada, List<DateTime> fechaActual)
         {
-            
+
             //Se crea instancia de Finalizada
             Estado proximoEstado = crearEstadoFinalizada();
 

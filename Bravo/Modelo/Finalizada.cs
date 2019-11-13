@@ -8,10 +8,7 @@ namespace Bravo.Modelo
 {
     class Finalizada : Estado
     {
-        //capaz no 
         public int ID { get; set; }
-        //retorno un estado para pasarselo al Historial nuevo, en patron dice void
-
 
         public override HistorialIntervencion crearHistorialIntervencion(Estado estado, DateTime fechaActual)
         {
