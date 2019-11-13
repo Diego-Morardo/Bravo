@@ -22,7 +22,6 @@ namespace Bravo.Modelo
         public List<Dotacion> dotaciones { get; set; }
 
 
-
         public void finalizar(Intervencion intervencion, List<float> km, List<DateTime> fechaActual)
         {
             estadoActual.finalizar(intervencion, km, fechaActual);
@@ -39,6 +38,9 @@ namespace Bravo.Modelo
             return estadoActual.esEnCurso();
         }
 
-  
+        public void setEstadoActual(Estado estado)
+        {
+            estadoActual = estado;
+        }
     }
 }

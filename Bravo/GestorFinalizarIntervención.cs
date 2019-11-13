@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace Bravo
 {
-    
-
     class GestorFinalizarIntervención
     {
-        Intervencion intervencion = new Intervencion();
-
         public List<Dotacion> crearDotaciones()
         {
             Dotacion dota1 = new Dotacion()

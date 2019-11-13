@@ -8,13 +8,6 @@ namespace Bravo.Modelo
 {
     class Finalizada : Estado
     {
-        public int ID { get; set; }
-
-        public override HistorialIntervencion crearHistorialIntervencion(Estado estado, DateTime fechaActual)
-        {
-            HistorialIntervencion historialIntervencion = new HistorialIntervencion();
-            return historialIntervencion;
-        }
         public override void finalizar(Intervencion intervencion, List<float> kmLlegada, List<DateTime> fechaActual)
         {
         }
@@ -26,6 +19,5 @@ namespace Bravo.Modelo
         public override bool esPendiente() => false;
         public override bool esFirmada() => false;
         public override bool esAbortada() => false;
-
     }
 }

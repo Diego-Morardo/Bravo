@@ -13,7 +13,15 @@ namespace Bravo.Modelo
         public string descripcion { get; set; }
         public string nombre { get; set; }
 
-        public abstract HistorialIntervencion crearHistorialIntervencion(Estado estado, DateTime fechaActual);
+        public HistorialIntervencion crearHistorialIntervencion(Estado estado, DateTime fechaActual)
+        {
+            HistorialIntervencion historialIntervencion = new HistorialIntervencion();
+
+            historialIntervencion.estado = estado;
+            historialIntervencion.fechaHoraDesde = DateTime.Today;
+
+            return historialIntervencion;
+        }
         public abstract void finalizar(Intervencion intervencion, List<float> kmLlegada, List<DateTime> fechaActual);
         public abstract bool esEnCurso();
         public abstract bool esConvocada();
@@ -22,6 +30,5 @@ namespace Bravo.Modelo
         public abstract bool esFirmada();
         public abstract bool esFinalizada();
         public abstract bool esAbortada();
-
     }
 }
