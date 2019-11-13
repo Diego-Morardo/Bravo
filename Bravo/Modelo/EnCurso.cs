@@ -41,8 +41,8 @@ namespace Bravo.Modelo
 
             foreach (Dotacion dotacion in intervencion.dotaciones)
             {
-                dotacion.fechaLlegada = fechaActual[i];
-                dotacion.kmUnidadLlegada = kmLlegada[i];
+                dotacion.setFechaLlegada(fechaActual[i]);
+                dotacion.setKmUnidadLlegada(kmLlegada[i]);
 
                 i++;
             }

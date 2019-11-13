@@ -17,6 +17,7 @@ namespace Bravo
         {
             Dotacion dota1 = new Dotacion()
             {
+                ID = 1,
                 fechaSalida = DateTime.Today,
                 kmUnidadSalida = 10548,
                 unidadMovil = "AB 123 CD"
@@ -24,6 +25,7 @@ namespace Bravo
 
             Dotacion dota2 = new Dotacion()
             {
+                ID = 2,
                 fechaSalida = DateTime.Today,
                 kmUnidadSalida = 6546,
                 unidadMovil = "AB 535 GF"
@@ -31,6 +33,7 @@ namespace Bravo
 
             Dotacion dota3 = new Dotacion()
             {
+                ID = 3,
                 fechaSalida = DateTime.Today,
                 kmUnidadSalida = 15480,
                 unidadMovil = "CR 654 FT"
@@ -161,7 +164,7 @@ namespace Bravo
 
         public void registrarFinalizacion(Intervencion inter, List<float> km, List<DateTime> fechaActual)
         {
-            intervencion.finalizar(inter, km, fechaActual);
+            inter.finalizar(inter, km, fechaActual);
         }
 
         public bool validarKilometraje(float kmLlegada, float kmSalida)

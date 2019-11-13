@@ -174,8 +174,7 @@ namespace Bravo
                 return;
             }
 
-            //GestorFinalizarIntervención.registrarFinalizacion(intervencion, kms, fechas);
-            intervencion.finalizar(intervencion, kms, fechas);
+            GestorFinalizarIntervención.registrarFinalizacion(intervencion, kms, fechas);
 
             MessageBox.Show("Intervencion finalizada con exito. \n\nNuevo Estado: " + intervencion.estadoActual.ToString()) ;
 
